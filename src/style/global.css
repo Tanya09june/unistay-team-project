@@ -364,15 +364,6 @@ img {
 
 /* Temporary footer until Footer.jsx is created */
 
-.app > .footer {
-    background-color: var(--color-surface-container);
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-}
-
-/* Mobile screen adjustments */
-
 @media (max-width: 600px) {
     .hero {
         padding: 60px 20px;

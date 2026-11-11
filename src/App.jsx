@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
-
+import Footer from './components/footer';
 function App() {
     return (
         <BrowserRouter>
@@ -18,9 +18,7 @@ function App() {
           </span>
                 </main>
 
-                <footer className="footer">
-                    <p>UniStay - Student Project</p>
-                </footer>
+                <Footer />
             </div>
         </BrowserRouter>
     );
