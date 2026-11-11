@@ -1,27 +1,24 @@
-import { BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/footer";
+import Explore from "./pages/Explore";
+import ExploreMap from "./pages/ExploreMap";
+
 function App() {
-    return (
-        <BrowserRouter>
-            <div className="app">
-                <Navbar />
+  return (
+    <BrowserRouter>
+      <div className="app">
+        <Navbar />
 
-                <main className="hero">
-                    <h1>Find Your Student Home in Finland</h1>
-                    <p>
-                        UniStay helps students explore housing
-                        options in Helsinki, Espoo and Vantaa.
-                    </p>
-                    <span className="coming-soon">
-            Project Under Development
-          </span>
-                </main>
+        <Routes>
+          <Route path="/" element={<Explore />} />
+          <Route path="/explore-map" element={<ExploreMap />} />
+        </Routes>
 
-                <Footer />
-            </div>
-        </BrowserRouter>
-    );
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
