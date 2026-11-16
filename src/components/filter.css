@@ -1,0 +1,29 @@
+/* CityFilter Styles */
+.city-filter-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+    padding: 4px 0;
+    no-scrollbar: true;
+}
+
+.city-filter-container::-webkit-scrollbar {
+    display: none;
+}
+
+.city-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 13px;
+    font-weight: 600;
+    background-color: var(--color-surface-lowest);
+    border: 1px solid var(--color-surface-high);
+    color: var(--color-on-surface-variant);
+    white-space: nowrap;
+    transition: all 0.18s ease;
+}
+
