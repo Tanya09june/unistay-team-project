@@ -1,6 +1,6 @@
 import React from 'react';
 import { cities } from '../data/properties';
-import './CityFilter.css';
+import './filter.css';
 
 export default function CityFilter({ selectedCity, onSelectCity }) {
     return (
@@ -15,4 +15,20 @@ export default function CityFilter({ selectedCity, onSelectCity }) {
                         aria-selected={isActive}
                         className={`city-chip ${isActive ? 'is-active' : ''}`}
                         onClick={() => onSelectCity(city.id)}
-
+                    >
+            <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>
+              {city.id === 'all'
+                  ? 'domain'
+                  : city.id === 'Espoo'
+                      ? 'school'
+                      : city.id === 'Helsinki'
+                          ? 'tram'
+                          : 'directions_subway'}
+            </span>
+                        {city.label}
+                    </button>
+                );
+            })}
+        </div>
+    );
+}
