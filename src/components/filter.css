@@ -1,4 +1,3 @@
-/* CityFilter Styles */
 .city-filter-container {
     display: flex;
     align-items: center;
@@ -27,3 +26,15 @@
     transition: all 0.18s ease;
 }
 
+.city-chip:hover {
+    border-color: var(--color-tertiary);
+    color: var(--color-on-surface);
+    background-color: var(--color-surface-low);
+}
+
+.city-chip.is-active {
+    background-color: var(--color-primary-container);
+    color: var(--color-on-primary);
+    border-color: var(--color-primary-container);
+    box-shadow: var(--shadow-sm);
+}
