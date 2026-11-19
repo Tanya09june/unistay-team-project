@@ -46,4 +46,7 @@
     border-radius: var(--radius-full);
     transition: color 0.15s ease;
 }
+.search-bar-clear:hover {
+    color: var(--color-on-surface);
+}
 
