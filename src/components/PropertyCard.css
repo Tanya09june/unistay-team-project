@@ -1,0 +1,211 @@
+/* Property Card */
+.property-card {
+    background-color: var(--color-surface-lowest);
+    border: 1px solid var(--color-surface-high);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s ease;
+}
+
+/* Card Hover */
+.property-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-tertiary);
+}
+
+/* Property Image */
+.property-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: var(--color-surface-high);
+}
+
+.property-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.property-card:hover .property-image {
+    transform: scale(1.03);
+}
+
+/* Image Overlay */
+.property-image-overlay {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.property-image-overlay > * {
+    pointer-events: auto;
+}
+
+/* Save Button */
+.save-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-full);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    color: var(--color-outline);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    transition: 0.18s ease;
+}
+
+.save-btn:hover {
+    background-color: #ffffff;
+    color: var(--color-secondary-container);
+    transform: scale(1.08);
+}
+
+.save-btn.is-saved {
+    background-color: #ffffff;
+    color: var(--color-secondary-container);
+}
+
+.save-btn.is-saved .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Property Content */
+.property-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--spacing-sm);
+}
+
+/* Price */
+.property-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.property-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-primary);
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.property-period {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-on-surface-variant);
+}
+
+.property-all-inclusive {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-secondary);
+    background-color: var(--color-secondary-fixed);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+/* Title */
+.property-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.3;
+}
+
+/* Address */
+.property-address {
+    font-size: 13px;
+    color: var(--color-on-surface-variant);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.property-address .material-symbols-outlined {
+    font-size: 16px;
+    color: var(--color-outline);
+}
+
+/* Transport */
+.property-transit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    background-color: var(--color-surface-low);
+    border-radius: var(--radius-md);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-tertiary);
+    margin-top: 2px;
+}
+
+.property-transit-badge .material-symbols-outlined {
+    font-size: 16px;
+    color: var(--color-tertiary);
+}
+
+/* Property Details */
+.property-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 8px 0;
+    border-top: 1px solid var(--color-surface-high);
+    border-bottom: 1px solid var(--color-surface-high);
+    margin-top: auto;
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--color-outline);
+    font-weight: 700;
+}
+
+.spec-value {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-on-surface);
+}
+
+/* Buttons */
+.property-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+}
+
+.property-actions .btn {
+    flex: 1;
+    font-size: 13px;
+    padding: 8px 12px;
+}
+/* Button hover */
+.property-actions .btn:hover {
+    opacity: 0.9;
+}
