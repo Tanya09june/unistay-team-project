@@ -205,3 +205,7 @@
     font-size: 13px;
     padding: 8px 12px;
 }
+/* Button hover */
+.property-actions .btn:hover {
+    opacity: 0.9;
+}
