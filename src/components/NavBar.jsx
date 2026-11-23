@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
+//import { demoUser } from '../data/properties';
+//import { useSavedProperties } from '../context/SavedPropertiesContext';
 
 function Navbar() {
     const [profileOpen, setProfileOpen] = useState(false);
