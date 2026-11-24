@@ -16,7 +16,7 @@ function PropertyCard({ property, onSelect }) {
 
     function handleApply(event) {
         event.stopPropagation();
-        alert(`Apply workflow for "${property.title}" initiated for Tanya.`);
+        alert(`Application started for ${property.title}.`);
     }
 
     function handleDetails(event) {
