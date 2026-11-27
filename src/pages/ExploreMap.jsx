@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import MapView from "../components/MapView";
+import MapView from "../components/map";
 import PropertyCard from "../components/PropertyCard";
 import { properties } from "../data/properties";
 
@@ -139,7 +139,9 @@ export default function ExploreMap() {
                     <div style={{ width: "100%", minWidth: 0 }}>
                         <MapView
                             properties={properties}
+                            selectedProperty={selectedProperty}
                             onSelectProperty={handlePropertySelect}
+                            viewMode={viewMode}
                         />
                     </div>
                 )}
